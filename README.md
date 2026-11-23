@@ -1,77 +1,78 @@
-# Faceless Video: Gumawa ng Reels nang hindi humaharap sa camera
+# Reel Stack: 3 layer para hindi magmukhang AI slop ang Reels mo
 
-Avatar ng mukha mo + AI clone ng boses mo + Claude Code para sa pag-edit.
-Ito ang setup na ginamit ko sa mga Reels ko. Kung galing ka sa comment na **AVATAR**, nasa tamang lugar ka. 👋
+Kung galing ka sa comment na **STACK**, nasa tamang lugar ka. 👋
+Ito ang tatlong layer na ginagamit ko sa bawat animated na Reel na ginagawa ko gamit ang Claude Code.
 
-> **Tapat na paalala:** may bayad ang ElevenLabs (Starter) at ang Claude Code (paid Claude plan). I-review pa rin ang bawat video bago i-post, **sariling boses lang ang i-clone**, at lagyan ng **AI label** ang post.
+| Layer | Ano ito | Kapag wala ito |
+|---|---|---|
+| **01 Brand base** | Font, kulay at mukha (avatar) na naka-lock | Iba-iba ang itsura ng bawat video, halatang AI |
+| **02 Script playbook** | Structure ng script na napatunayan nang gumagana | Nanghuhula ka kung paano magsisimula |
+| **03 Quality check** | Pagsilip sa bawat eksena bago mag-render | Lumalabas ang maling bigkas, sobrang habang text at maling subtitle |
+
+> **Bago ka magsimula:** kailangan mo ng Claude Code (paid Claude plan) na naka-setup bilang video editor. Sundan muna ang [`../ai-video-editor/`](../ai-video-editor/). Kung gusto mong gamitin ang mukha at boses mo nang hindi humaharap sa camera, tingnan ang [`../faceless-video/`](../faceless-video/).
 
 ---
 
-## Hakbang 1: Gawing cartoon avatar ang mukha mo
+## Layer 1: Brand base
 
-Kailangan mo lang ng isang malinaw na litrato ng mukha mo (nakaharap, maliwanag).
-
-1. Gumamit ng AI image tool na may image generation (hal. ChatGPT o Gemini).
-2. I-upload ang litrato mo at gamitin ang prompt na ito:
+Isang beses mo lang ito gagawin. Sine-save ito ni Claude bilang "brand file" na susundan ng bawat susunod na video.
 
 ```text
-Turn this photo into a clean black-and-white cartoon avatar of the same person.
-Head only (no neck or body), facing the camera, simple bold line art, white background,
-friendly neutral expression with closed mouth, keep my hairstyle, glasses and face shape.
-Square image, high resolution.
+Help me lock in my brand base for all my future Reels. Save it as brand.md in this project.
+
+1. Fonts: one bold sans-serif for headlines and one accent font for emphasis (suggest free Google Fonts).
+2. Colors: one background, one text color, and ONE accent color. Give me hex codes.
+3. Face: use my avatar.png (head only) as the recurring character, small in a corner
+   and big at emotional moments.
+4. Layout rules: where the headline, visuals, avatar and subtitles go on a 1080x1920 frame.
+
+Show me a sample frame first. Once I approve, every video must follow brand.md.
 ```
 
-3. I-save bilang `avatar.png`. Ulitin hanggang kamukha mo talaga.
+**Tip:** isang accent color lang. Kapag marami, nawawala ang "itsura mo."
 
-**Tip:** mas madaling gawan ng lip-sync ang avatar kung nakasara ang bibig at malinaw ang mata.
+## Layer 2: Script playbook
 
-## Hakbang 2: I-clone ang boses mo sa ElevenLabs
-
-1. Gumawa ng account sa [elevenlabs.io](https://elevenlabs.io) at piliin ang **Starter** plan (mga $6 kada buwan; i-check ang kasalukuyang presyo sa pricing page nila).
-2. **Voices → Add a new voice → Instant Voice Clone.**
-3. Mag-record o mag-upload ng **1–2 minutong malinis na boses mo**: tahimik na kwarto, walang music, relaxed na parang kausap mo ang kaibigan.
-4. I-check ang consent na boses mo ito, tapos i-save. Subukan sa ilang Taglish na linya.
-5. Kunin ang **Voice ID** ng clone mo.
-
-**Ikonekta sa Claude Code** (para siya na ang gagawa ng voiceover): sa folder ng project mo, patakbuhin ito sa terminal at sundan ang lalabas. Ikaw ang mag-a-approve sa browser; hindi mo kailangang kopyahin ang API key.
+Ang structure na paulit-ulit mong gagamitin. Hindi mo na kailangang manghula kung paano magsisimula.
 
 ```text
-npx -y @elevenlabs/cli@latest onboard init
+Save this as playbook.md and use it for every Reel script I ask for:
+
+1. HOOK (first 3 seconds): name the viewer's pain or a surprising claim. No greetings.
+2. PROBLEMA: why it matters, in one or two lines.
+3. 3 STEPS: give the framework a name, then explain each step as "without it -> with it".
+4. CTA: one keyword to comment, and what they will get.
+
+Rules: Taglish, conversational, 45-70 seconds, short lines, one idea per line.
+Now write a script about [TOPIC] for [AUDIENCE] using this playbook. Show it to me and wait for my OK.
 ```
 
-## Hakbang 3: Si Claude Code ang bahala sa pag-edit
+**Tip:** kapag may Reel ng ibang creator na nag-viral, ipa-breakdown kay Claude ang structure nila at idagdag sa playbook mo. Gayahin ang **structure**, hindi ang mga salita.
 
-Una, i-setup ang AI video editor gamit ang tatlong prompt sa [`../ai-video-editor/`](../ai-video-editor/).
-Pagkatapos, ilagay ang `avatar.png` sa folder ng project at gamitin ang prompt na ito:
+## Layer 3: Quality check
+
+Bago ang mahabang render, silipin muna ang bawat eksena. Ulitin lang ang pumalya.
 
 ```text
-Make a vertical animated explainer Reel (1080x1920) with no camera footage.
+Before rendering the final video:
 
-Topic: [TOPIC]
-Audience: [WHO IT'S FOR]
-CTA keyword: [KEYWORD] — the viewer gets [WHAT YOU WILL SEND]
-
-1. Write a Taglish script (45–60 seconds) with this structure:
-   hook in the first 3 seconds -> the problem -> 3 clear steps -> an honest note -> CTA.
-   Show me the script and wait for my OK.
-2. Voiceover: use my ElevenLabs voice clone (voice ID: [VOICE ID]), one request per line,
-   and get word timings. Trim the silence at the start/end of each line and shorten long
-   pauses so it sounds natural, not rushed.
-3. Visuals: clean motion graphics that change every 2–3 seconds and match the words being
-   said, word-by-word captions with the current word highlighted, and my avatar.png
-   (small in a corner, big at emotional moments) with a mouth that moves with the voice
-   and natural blinking.
-4. Add light background music under the voice and soft sound effects on the animations.
-5. Show me still frames of each scene before the final render. Then render to "Exports",
-   plus a version without music, a 1080x1920 thumbnail and a Facebook caption.
+1. Take a still frame of every scene and show them to me.
+2. Check each frame for: text that overflows or gets cut off, overlapping elements,
+   subtitles that don't match the voice, and words that are mispronounced.
+3. List every problem you find, fix only those scenes, and show me the fixed frames.
+4. Only render the full video after I approve.
 ```
+
+**Tip:** kapag mali ang bigkas ng AI voice, ang **binibigkas** lang ang baguhin (hal. "C-T-A", "e-peyst"). Huwag galawin ang subtitle.
+
+---
 
 ## Ang resulta
 
-- Isang Reel na boses mo at mukha mo, pero hindi ka humarap sa camera.
-- Bersyong may music at wala, thumbnail, at caption na handa nang i-post.
-- Mga revision sa simpleng salita: "palakihin ang hook", "bilisan ang boses nang 10%", "hinaan ang music".
+- Bawat video ay mukhang galing sa iisang channel.
+- Mabilis kang makagawa ng script dahil may playbook ka na.
+- Mas kaunti ang render na sayang, dahil nahuhuli agad ang mali.
 
----
+Paalala: i-review pa rin ang bawat video bago i-post, at lagyan ng **AI label** kung AI ang boses o visuals.
 
 [← Bumalik sa lahat ng project](../README.md)
