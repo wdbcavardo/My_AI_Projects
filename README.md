@@ -11,6 +11,7 @@ Koleksyon ng mga AI project, experiment at prototype ko: mga AI build, automatio
 | 🧱 **Reel Stack** | Tatlong layer (brand base, script playbook, quality check) para hindi magmukhang AI slop ang Reels mo, may prompt bawat layer. | [`reel-stack/`](reel-stack/) |
 | 🔊 **Sound Stack** | Tatlong libreng tool (Openverse, Real SFX, Earshot) para may tamang tunog ang video mo kay Claude. | [`sound-stack/`](sound-stack/) |
 | 💸 **OpenCode (₱0)** | AI video editing nang walang binabayarang subscription: OpenCode + libreng model + FFmpeg. | [`opencode/`](opencode/) |
+| 🧬 **Hypit** | Gayahin ang structure ng viral video gamit ang AI agent mo, para sa sarili mong mensahe. | [`hypit/`](hypit/) |
 | 🛒 **Benta-Ready AI** | Taglish na assistant para sa baguhang seller: mula product idea hanggang offer at 7-araw na Facebook content plan. | [`benta-ready/`](benta-ready/) |
 
 ## Galing ka ba sa comment na EDITOR?
@@ -32,6 +33,10 @@ Diretso ka rito: **[Sound Stack →](sound-stack/)**
 ## Galing ka ba sa comment na OPENCODE?
 
 Diretso ka rito: **[OpenCode (₱0) →](opencode/)**
+
+## Galing ka ba sa comment na HYPIT?
+
+Diretso ka rito: **[Hypit →](hypit/)**
 
 ---
 
