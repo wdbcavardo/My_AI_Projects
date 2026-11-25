@@ -15,7 +15,7 @@ Koleksyon ng mga AI project, experiment at prototype ko: mga AI build, automatio
 | 🎞️ **Prompt Motion** | Makita muna ang animation at ang prompt sa likod nito, bago ka mag-type kay Claude. | [`prompt-motion/`](prompt-motion/) |
 | 🛒 **Benta-Ready AI** | Taglish na assistant para sa baguhang seller: mula product idea hanggang offer at 7-araw na Facebook content plan. | [`benta-ready/`](benta-ready/) |
 
-## Galing ka ba sa comment na EDITOR?
+## Galing ka ba sa comment na EDITOR o EDIT?
 
 Diretso ka rito: **[AI Video Editor →](ai-video-editor/)**
 
