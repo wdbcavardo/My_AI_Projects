@@ -12,7 +12,7 @@ Koleksyon ng mga AI project, experiment at prototype ko: mga AI build, automatio
 | 🔊 **Sound Stack** | Tatlong libreng tool (Openverse, Real SFX, Earshot) para may tamang tunog ang video mo kay Claude. | [`sound-stack/`](sound-stack/) |
 | 💸 **OpenCode (₱0)** | AI video editing nang walang binabayarang subscription: OpenCode + libreng model + FFmpeg. | [`opencode/`](opencode/) |
 | 🧬 **Hypit** | Gayahin ang structure ng viral video gamit ang AI agent mo, para sa sarili mong mensahe. | [`hypit/`](hypit/) |
-| 🎞️ **Prompt Motion** | Makita muna ang animation at ang prompt sa likod nito, bago ka mag-type kay Claude. | [`prompt-motion/`](prompt-motion/) |
+| 🎞️ **Prompt Motion** | Makita muna ang animation at ang prompt sa likod nito, bago ka mag-type kay Claude. Kasama ang AI x Leaders at Promptslove. | [`prompt-motion/`](prompt-motion/) |
 | 🛒 **Benta-Ready AI** | Taglish na assistant para sa baguhang seller: mula product idea hanggang offer at 7-araw na Facebook content plan. | [`benta-ready/`](benta-ready/) |
 
 ## Galing ka ba sa comment na EDITOR o EDIT?

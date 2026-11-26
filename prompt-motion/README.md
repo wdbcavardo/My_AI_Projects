@@ -37,4 +37,26 @@ then let me tell you what to adjust (speed, colors, text) until it fits my style
 
 ---
 
+# Bonus: dalawa pang mapagkukunan ng prompt
+
+Kung galing ka sa video na "tatlong lugar na nagbibigay ng prompt", narito ang dalawa pa.
+
+## 02. AI x Leaders (libre)
+
+**Link:** [ai-x-leaders.com/en/prompt](https://ai-x-leaders.com/en/prompt)
+
+> **Na-check noong Nobyembre 2026:** libreng library ng motion graphics prompts para sa **Claude at ChatGPT**. Bawat video ay may **kumpletong prompt** na may "Copy prompt" button, at hindi kailangan ng account para kopyahin. May filter ayon sa model at style (Launch films, Kinetic typography, Motion graphics, Explainers). Ang may bayad lang sa kanila ay ang hiwalay na masterclass at bootcamp.
+
+Paano gamitin: panoorin ang video, i-click ang **Copy prompt**, i-paste kay Claude, at palitan ang mga detalye para sa sarili mong mensahe.
+
+## 03. Promptslove (may bayad)
+
+**Link:** [promptslove.com/motion-graphics-claude-skill](https://promptslove.com/motion-graphics-claude-skill/)
+
+> **Na-check noong Nobyembre 2026 (mula sa product page nila):** isang **bayad na Claude skill** para sa motion graphics. Ayon sa kanila: isang command, ilang tanong, aaprubahan mo ang storyboard, tapos may 1080p video ka na may sariling beat-synced na soundtrack. Nada-download ito sa members area nila. Tingnan muna ang presyo at terms sa site bago bumili.
+
+---
+
+**Tip:** magsimula sa isang maikling eksena. Ayusin muna ang timing, text at transitions bago gawin ang buong video.
+
 [← Bumalik sa lahat ng project](../README.md)
